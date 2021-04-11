@@ -6,18 +6,18 @@
 using namespace std;
 
 /*STRUCTURE*/
-/*Dans mon programme trouve 3 grandes parties : La definition des fonctions des problèmes
-						Une fonction minimisation
-						Une fonction Main*/
+/*Dans mon programme, on trouve 3 grandes parties :     La definition des fonctions des problèmes
+							Une fonction minimisation
+							Une fonction Main*/
 /*FONCTIONNEMENT*/
-/* Pour realiser le test j'ai fait un programme avec une fonction minimisation qui contient un switch sur les differents solveurs utilisés, afin de correspondre à celui que l'utilisateur choisira*/
+/* Pour realiser le test, j'ai fait un programme avec une fonction minimisation qui contient un switch sur les differents solveurs utilisés, afin de correspondre à celui que l'utilisateur choisira*/
 /* Dans ma fonction main, on retrouve un autre switch sur les différents problèmes posés pour correspondre à celui que l'utilisateur choisira et on fait appel à la fonction minimisation pour appliquer le solveur*/
 
 
 /* MISE EN ROUTE*/
 /* l'executable de ce code a été généré via la commande "g++ Optim.cpp -o Optim.exe" sur le terminal Linux
-   Afin de lancer l'éxécutable, il suffit de lancer la commande "./Optim.exe" 
-					Un message oncernant le solveur à choisir (entre 1 et 7) vous sera demandé
+   Afin de lancer l'éxécutable, il suffit de lancer la commande "./Optim.exe" sur le terminal
+					Un message concernant le solveur à choisir (entre 1 et 7) vous sera demandé
 					Un autre message concernant le problème à choisir (entre 1 et 4) vous sera demandé 
 					Enfin un fichier result.txt sera généré. Ce fichier contient les variables à trouver et les éventuelles erreurs*/
 
@@ -36,7 +36,7 @@ using namespace std;
 
 
 
-/* toutes les fonctions prennent x et y en entrée pour ne pas à avoir à faire de condition sur la dimension du problème et alourdir le code par la suite*/
+/* toutes les fonctions prennent x et y en entré pour ne pas avoir à faire de condition sur la dimension du problème et alourdir le code par la suite*/
 
 
 
@@ -136,7 +136,7 @@ void minimisation( int solv,int x_min,int x_max,int y_min,int y_max, float (&f)(
 				for(int j=0;j<=9;j++)
 				{
 					F[i][j] = f((x_min+i*(x_max-x_min)*0.1),(y_min+j*(y_max-y_min)*0.1));/* on calcul f pour chaque couple. Dans le cas ou la dimension est 1, on aura juste 10 fois la 														      meme ligne dans F, donc ceci ne provoquera pas de problèmes*/
-													   /* la discretisation se fait dans cette étape en divisant l'espace par 10*/
+													   /* la discrétisation se fait dans cette étape en divisant l'espace par 10*/
 				}
 			}
 
